@@ -21,11 +21,11 @@ public class Reinas {
 
 	public static void ubicarReina(String[][] tablero, int etapa) {
 
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < tablero.length; i++) {
 			if (Valido(tablero, i, etapa)) {
 				tablero[i][etapa] = "♕";
 
-				if (etapa < 8) {
+				if (etapa < tablero.length - 1) {
 					ubicarReina(tablero, etapa + 1);
 				} else {
 					imprimir(tablero);
